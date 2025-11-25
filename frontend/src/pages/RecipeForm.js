@@ -27,7 +27,7 @@ export default function RecipeForm() {
   const API_BASE =
     window.location.hostname === "localhost"
       ? "http://127.0.0.1:5000"
-      : "https://your-backend-url.onrender.com";
+      : "https://ai-recipe-generator-y5i5.onrender.com";
 
   // Dark mode from localStorage
   useEffect(() => {
