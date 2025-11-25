@@ -74,7 +74,12 @@ export default function RecipeResult() {
   return (
     <div className={`result-wrapper ${darkMode ? "dark" : ""}`}>
       <header className="result-header">
-        <h2 className="title">🍽 Your AI Recipe</h2>
+        <h2
+  className="title clickable-title"
+  onClick={() => navigate("/recipe")}
+>
+  🍽 Your AI Recipe
+</h2>
         <button className="dark-toggle" onClick={toggleTheme}>
           {darkMode ? "☀️ Light" : "🌙 Dark"}
         </button>
