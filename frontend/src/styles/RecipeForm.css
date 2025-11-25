@@ -1,0 +1,246 @@
+/* Wrapper for theme */
+.recipe-app {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  color: #111827;
+}
+
+.recipe-app.dark {
+  background: radial-gradient(circle at top, #020617 0, #0f172a 40%, #020617 100%);
+  color: #e5e7eb;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 38px;
+}
+
+.logo {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.dark-toggle {
+  border-radius: 999px;
+  border: none;
+  padding: 7px 14px;
+  cursor: pointer;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-app.dark .dark-toggle {
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.7);
+}
+
+.recipe-container {
+  display: flex;
+  padding: 30px 40px 40px;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chef-animation {
+  width: 380px;
+  max-width: 100%;
+}
+
+.right-section {
+  flex: 1;
+  border-radius: 20px;
+  padding: 24px 24px 26px;
+  background: rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.21);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.recipe-app.dark .right-section {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(148, 163, 184, 0.4);
+}
+
+.title {
+  font-size: 28px;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin: 0 0 14px;
+  color: #374151;
+}
+
+.recipe-app.dark .subtitle {
+  color: #9ca3af;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tab-btn {
+  flex: 1;
+  border-radius: 999px;
+  border: none;
+  padding: 8px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  background: rgba(248, 250, 252, 0.8);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #f97316, #fb7185);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(248, 113, 113, 0.45);
+}
+
+.recipe-app.dark .tab-btn {
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+}
+
+/* Inputs */
+.field-label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 11px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.16);
+  outline: none;
+}
+
+.recipe-app.dark .input {
+  background: #020617;
+  color: #e5e7eb;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.9);
+}
+
+.input.textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1;
+  min-width: 140px;
+}
+
+.file-input {
+  cursor: pointer;
+}
+
+/* Image Mode */
+.image-mode {
+  margin-bottom: 10px;
+}
+
+.image-preview-box {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+.image-preview {
+  width: 100%;
+  display: block;
+  max-height: 220px;
+  object-fit: cover;
+}
+
+/* Button */
+.generate-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 11px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #f97316, #ec4899);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.45);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.2s ease;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(236, 72, 153, 0.55);
+}
+
+.generate-btn:disabled {
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Loading */
+.loading-box {
+  text-align: center;
+  padding: 26px 10px;
+}
+
+.loading-lottie {
+  width: 160px;
+  margin: 0 auto 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .recipe-container {
+    flex-direction: column;
+    padding: 14px 16px 24px;
+  }
+
+  .left-section {
+    order: 2;
+  }
+
+  .right-section {
+    order: 1;
+  }
+
+  .chef-animation {
+    width: 260px;
+  }
+
+  .top-bar {
+    padding: 10px 16px;
+  }
+}
