@@ -123,3 +123,17 @@
   cursor: not-allowed;
   box-shadow: none;
 }
+
+.clickable-title {
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.clickable-title:hover {
+  color: #ff7b00;
+  transform: scale(1.05);
+  text-decoration: none !important;
+}
+
